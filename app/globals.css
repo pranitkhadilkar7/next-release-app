@@ -2,32 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  html,
+  body {
+    @apply tw-h-full tw-overflow-hidden;
   }
+}
+
+@font-face {
+  font-family: 'proxima_novaregular';
+  src:
+    url('../assets/fonts/proximanova-regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/proximanova-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novabold';
+  src:
+    url('../assets/fonts/proximanova-bold-webfont.woff2') format('woff2'),
+    url('../assets/fonts/proximanova-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_novaextrabold';
+  src:
+    url('../assets/fonts/proximanova-extrabold-webfont.woff2') format('woff2'),
+    url('../assets/fonts/proximanova-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
