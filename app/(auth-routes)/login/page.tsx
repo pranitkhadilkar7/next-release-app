@@ -1,11 +1,13 @@
+'use client'
+
 import { PrimaryButton } from '@/components/PrimaryButton'
+import { loginAction } from '@/lib/actions'
+
+const initialState = {
+  message: '',
+}
 
 export default function Login() {
-  async function loginAction(formData: FormData) {
-    'use server'
-    console.log('form Action called')
-  }
-
   return (
     <div className="tw-flex tw-flex-col tw-w-full tw-items-center">
       <h3 className="tw-font-bold tw-text-[1.75rem] tw-leading-9 tw-mt-2 tw-text-[#1e252d] tw-mb-2">
@@ -27,6 +29,7 @@ export default function Login() {
                   sm:tw-text-sm sm:tw-leading-6"
             placeholder="you@example.com"
             name="email"
+            required
           />
         </div>
         <div className="tw-w-full tw-my-4">
@@ -45,6 +48,7 @@ export default function Login() {
                   sm:tw-text-sm sm:tw-leading-6"
               placeholder="Password"
               name="password"
+              required
             />
           </div>
           <PrimaryButton

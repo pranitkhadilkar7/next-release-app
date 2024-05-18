@@ -1,3 +1,6 @@
+'use client'
+
+import { useFormStatus } from 'react-dom'
 import { Spinner } from '../icons/Spinner'
 
 type Props = {
@@ -15,6 +18,8 @@ export function PrimaryButton({
   disabled,
   showSpinner,
 }: Props) {
+  const { pending } = useFormStatus()
+
   return (
     <button
       type={type}
@@ -22,7 +27,7 @@ export function PrimaryButton({
         disabled:tw-bg-gray-500 disabled:tw-border-gray-500 tw-flex tw-flex-row tw-items-center tw-justify-around ${className}`}
       disabled={disabled}
     >
-      {showSpinner ? <Spinner /> : title}
+      {showSpinner || pending ? <Spinner /> : title}
     </button>
   )
 }
