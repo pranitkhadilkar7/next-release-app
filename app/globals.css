@@ -5,7 +5,7 @@
 @layer utilities {
   html,
   body {
-    @apply tw-h-full tw-overflow-hidden;
+    @apply tw-h-full tw-overflow-hidden tw-font-proxima_novaregular;
   }
 }
 

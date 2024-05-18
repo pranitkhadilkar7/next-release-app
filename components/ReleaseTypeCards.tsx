@@ -20,7 +20,7 @@ export async function ReleaseTypeCards() {
         lastUpdateMonth={release?.fspRelease?.month ?? '--'}
         lastUpdateYear={release?.fspRelease?.year ?? '--'}
         buttonText="I'm a FSP"
-        className="tw-bg-white-house tw-bg-no-repeat tw-bg-50% tw-bg-right"
+        className="tw-bg-rocket tw-bg-no-repeat tw-bg-50% tw-bg-right"
       />
     </>
   )

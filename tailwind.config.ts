@@ -58,8 +58,8 @@ const config: Config = {
       backgroundImage: {
         'back-swerl': "url('/images/back-swerl.png')",
         'white-house': "url('/images/whitehouse.png')",
-        rocket: "url('/public/images/rocket.png')",
-        'relase-page': "url('/public/images/bg-dark-theme.png')",
+        rocket: "url('/images/rocket.png')",
+        'relase-page': "url('/images/bg-dark-theme.png')",
       },
       backgroundSize: {
         auto: 'auto',
