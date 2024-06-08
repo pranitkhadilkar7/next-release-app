@@ -1,4 +1,4 @@
-import { getLatestRelease } from '@/lib/actions'
+import { getLatestRelease } from '@/common/actions/release'
 import { ReleaseTypeCard } from './ReleaseTypeCard'
 
 export async function ReleaseTypeCards() {
@@ -9,16 +9,16 @@ export async function ReleaseTypeCards() {
       <ReleaseTypeCard
         title="Regulator Release notes"
         navigateTo="/"
-        lastUpdateMonth={release?.regRelease?.month ?? '--'}
-        lastUpdateYear={release?.regRelease?.year ?? '--'}
+        lastUpdateMonth={release?.data?.regRelease?.month ?? '--'}
+        lastUpdateYear={release?.data?.regRelease?.year ?? '--'}
         buttonText="I'm a Regulator"
         className="tw-bg-white-house tw-bg-no-repeat tw-bg-50% tw-bg-right"
       />
       <ReleaseTypeCard
         title="FSP Release notes"
         navigateTo="/"
-        lastUpdateMonth={release?.fspRelease?.month ?? '--'}
-        lastUpdateYear={release?.fspRelease?.year ?? '--'}
+        lastUpdateMonth={release?.data?.fspRelease?.month ?? '--'}
+        lastUpdateYear={release?.data?.fspRelease?.year ?? '--'}
         buttonText="I'm a FSP"
         className="tw-bg-rocket tw-bg-no-repeat tw-bg-50% tw-bg-right"
       />

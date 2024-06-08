@@ -22,14 +22,6 @@ export default function Home() {
             }
           >
             <ReleaseTypeCards />
-            {/* <ReleaseTypeCard
-              title="Regulator Release notes"
-              navigateTo="/"
-              lastUpdateMonth={'--'}
-              lastUpdateYear={'--'}
-              buttonText="I'm a Regulator"
-              className="tw-bg-white-house tw-bg-no-repeat tw-bg-50% tw-bg-right"
-            /> */}
           </Suspense>
         </div>
       </div>
