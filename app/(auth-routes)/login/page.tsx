@@ -3,6 +3,7 @@
 import { loginUser } from '@/common/actions/login'
 import { PrimaryButton } from '@/components/PrimaryButton'
 import { AuthFormInitialState } from '@/types/auth-routes'
+import Link from 'next/link'
 import { useActionState } from 'react'
 
 const initialState: any = {}
@@ -76,12 +77,12 @@ export default function Login() {
       )}
       <p className="tw-mt-4 tw-text-sm tw-text-gray-500">
         Not a member?{' '}
-        <a
-          href="/"
+        <Link
+          href="/signup"
           className="tw-font-semibold tw-leading-6 tw-text-primary hover:tw-text-primary"
         >
           Register for free
-        </a>
+        </Link>
       </p>
       <p className="tw-mt-1 tw-text-sm tw-text-gray-500">
         Not here to create a release?{' '}
