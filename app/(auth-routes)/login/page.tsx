@@ -11,8 +11,6 @@ const initialState: any = {}
 export default function Login() {
   const [state, action] = useActionState(loginUser, initialState)
 
-  console.log(state)
-
   return (
     <div className="tw-flex tw-flex-col tw-w-full tw-items-center">
       <h3 className="tw-font-bold tw-text-[1.75rem] tw-leading-9 tw-mt-2 tw-text-[#1e252d] tw-mb-2">
