@@ -4,6 +4,8 @@ import { z } from 'zod'
 import { post } from '../http/httpInstance'
 import { AuthFormInitialState, LoginResponse } from '@/types/auth-routes'
 import { LOGIN_USER } from '../constants/api-urls'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export async function loginUser(
   prenState: AuthFormInitialState,
@@ -30,7 +32,14 @@ export async function loginUser(
         password: formData.get('password'),
       }),
     })
-    return response
+    if (response.error) {
+      return {
+        error: response.error,
+      }
+    }
+    cookies().set('token', response?.data?.accessToken ?? '')
+    redirect('/')
+    return
   }
   return {
     error: JSON.parse(parse.error.message)?.map((err: any) => err.message),
