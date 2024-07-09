@@ -9,8 +9,11 @@ export async function getLatestRelease() {
   return latestRelease
 }
 
-export async function getFspReleases(pageSize: number) {
-  const data = new URLSearchParams({ type: 'FSP', pageSize: 2 + '' })
+export async function getFspReleases(pageSize?: number) {
+  const data = new URLSearchParams({
+    type: 'FSP',
+    ...(pageSize ? { pageSize: pageSize + '' } : {}),
+  })
   const fspReleases = await get<{ data: Release[]; total: number }>(
     GET_RELEASES + '?' + data.toString()
   )
