@@ -1,4 +1,6 @@
-export type ReleaseType = 'FSP' | 'REGULATOR'
+import { RELEASE_TYPES } from '@/common/constants/variables'
+
+export type ReleaseType = (typeof RELEASE_TYPES)[number]
 export type ReleaseStatus = 'PUBLISHED' | 'UNPUBLISHED'
 
 export type Release = {

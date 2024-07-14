@@ -1,14 +1,22 @@
-import { getFspReleases } from '@/common/actions/release'
+import { getReleasesByType } from '@/common/actions/release'
 import { Release } from '@/components/Release'
 import logo from '@/assets/images/dark-theme-logo.png'
 import Image from 'next/image'
+import { RELEASE_TYPES } from '@/common/constants/variables'
+import { ReleaseType } from '@/types/Release'
+
+export function generateStaticParams() {
+  return RELEASE_TYPES.map((releaseType) => ({
+    slug: releaseType,
+  }))
+}
 
 export default async function Releases({
   params,
 }: {
-  params: { slug: string }
+  params: { slug: ReleaseType }
 }) {
-  const releases = await getFspReleases()
+  const releases = await getReleasesByType(params.slug)
   return (
     <div className="tw-flex tw-flex-col tw-h-full tw-overflow-auto tw-bg-relase-page tw-bg-no-repeat tw-bg-cover tw-bg-[#25313e]">
       <div className="tw-flex tw-flex-row tw-items-center tw-justify-center tw-py-6 tw-px-30">
