@@ -5,6 +5,14 @@ const nextConfig = {
       fullUrl: true,
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
+  },
 }
 
 export default nextConfig

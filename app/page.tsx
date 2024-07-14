@@ -1,5 +1,4 @@
 import { LogoHeader } from '@/components/LogoHeader'
-import { ReleaseTypeCard } from '@/components/ReleaseTypeCard'
 import { ReleaseTypeCards } from '@/components/ReleaseTypeCards'
 import { ReleaseTypeLoadingCard } from '@/components/ReleaseTypeLoadingCard'
 import { Suspense } from 'react'
