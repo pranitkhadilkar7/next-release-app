@@ -42,7 +42,7 @@ export function NavMenu() {
         >
           <MenuItem>
             <a
-              className="tw-block tw-px-4 tw-py-2 tw-text-sm tw-text-gray-700"
+              className="tw-block tw-px-4 tw-py-2 tw-text-sm tw-text-gray-700 tw-cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
                 router.push('/create-release')
@@ -53,7 +53,7 @@ export function NavMenu() {
           </MenuItem>
           <MenuItem>
             <a
-              className="tw-block tw-px-4 tw-py-2 tw-text-sm tw-text-gray-700"
+              className="tw-block tw-px-4 tw-py-2 tw-text-sm tw-text-gray-700 tw-cursor-pointer"
               onClick={(e) => {
                 e.preventDefault()
               }}
