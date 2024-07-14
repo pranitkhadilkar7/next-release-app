@@ -8,7 +8,7 @@ export async function ReleaseTypeCards() {
     <>
       <ReleaseTypeCard
         title="Regulator Release notes"
-        navigateTo="/"
+        navigateTo={`/release/REGULATOR`}
         lastUpdateMonth={release?.data?.regRelease?.month ?? '--'}
         lastUpdateYear={release?.data?.regRelease?.year ?? '--'}
         buttonText="I'm a Regulator"
@@ -16,7 +16,7 @@ export async function ReleaseTypeCards() {
       />
       <ReleaseTypeCard
         title="FSP Release notes"
-        navigateTo="/"
+        navigateTo="/release/FSP"
         lastUpdateMonth={release?.data?.fspRelease?.month ?? '--'}
         lastUpdateYear={release?.data?.fspRelease?.year ?? '--'}
         buttonText="I'm a FSP"
